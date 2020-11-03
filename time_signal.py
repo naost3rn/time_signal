@@ -10,9 +10,10 @@ import json
 import pychromecast
 
 logger = getLogger(__name__)
+handler = StreamHandler()
 logger.setLevel(DEBUG)
-sh = StreamHandler()
-logger.addHandler(sh)
+handler.setLevel(DEBUG)
+logger.addHandler(handler)
 
 
 def load_config(filename):
