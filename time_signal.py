@@ -3,14 +3,14 @@
 
 from os import path
 from datetime import datetime
-from logging import getLogger, StreamHandler
+from logging import getLogger, StreamHandler, DEBUG
 import time
 import json
 
 import pychromecast
 
 logger = getLogger(__name__)
-logger.setLevel(20)
+logger.setLevel(DEBUG)
 sh = StreamHandler()
 logger.addHandler(sh)
 
