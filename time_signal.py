@@ -3,15 +3,20 @@
 
 from os import path
 from datetime import datetime
-from logging import getLogger, StreamHandler
+import logging
 import time
 import json
 
 import pychromecast
 
-logger = getLogger(__name__)
-logger.setLevel(20)
-sh = StreamHandler()
+# create logger
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
+
+# create console handler and set level to debug
+sh = logging.StreamHandler()
+
+# add ch to logger
 logger.addHandler(sh)
 
 
